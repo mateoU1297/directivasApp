@@ -15,18 +15,18 @@
     </div>
     <div class="col-auto">
       <span
-        *ngIf="miFormulario.get('nombre')?.invalid"
-        class="form-text"
+        *ngIf   = "miFormulario.get('nombre')?.invalid"
+        [color]   = "color"
+        mensaje = "Debe de ingresar este campo"
         error-msg
       >
-        Este campo es requerido
       </span>
     </div>
   </div>
 
   <div class="row mt-3">
     <div class="col">
-      <button class="btn btn-primary">
+      <button (click)="cambiarColor()" class="btn btn-primary">
         Guardar
       </button>
     </div>
